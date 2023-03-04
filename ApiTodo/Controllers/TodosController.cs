@@ -86,9 +86,9 @@ namespace ApiTodo.Controllers
             if (todo is null)
                 return NotFound($"Todo com Id={id} não foi encontrado.");
 
-            todo.Id = todoInput.Id;
             todo.Nome = todoInput.Nome;
             todo.Descricao = todoInput.Descricao;
+            todo.Concluida = todoInput.Concluida;
             _context.SaveChanges();
 
             return Ok(todo);

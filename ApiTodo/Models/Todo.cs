@@ -12,7 +12,6 @@ namespace ApiTodo.Models
         [Required]
         [StringLength(300)]
         public string Descricao { get; set; }
-        [DefaultValue(false)]
         public bool Concluida { get; set; }
     }
 }
